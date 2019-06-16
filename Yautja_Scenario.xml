@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<Operation Class="PatchOperationSequence">
+  <success>Always</success>
+  <operations>
+    <li Class="PatchOperationTest">
+      <xpath>Defs/ResearchTabDef[defName="CE_Turrets"]</xpath>
+    </li>
+	<!--
+    <li Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/ScenarioDef[defName="OrkScenarioTest"]/parts</xpath>
+        <value>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Ammo_OGAuto</thingDef>
+				<count>500</count>
+			</li>
+        </value>
+    </li>
+    <li Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>Defs/ScenarioDef[defName="KrootLostTribe"]/parts</xpath>
+        <value>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Ammo_Arrow_Stone</thingDef>
+				<count>200</count>
+			</li>
+        </value>
+    </li>
+	-->
+  </operations>
+</Operation>
+
+</Patch>
