@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Alien Vs Predator Combat Extended Patch</name>
+	<author>Saebbi, Ogliss &amp; Rebelrot</author>
+	<supportedVersions>
+        <li>1.0</li>
+	</supportedVersions>
+	<description>Patches the AvP mod to work with Combat Extended.</description>
+</ModMetaData>

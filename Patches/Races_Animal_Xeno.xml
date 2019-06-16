@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationSequence">
+  <success>Always</success>
+  <operations>
+    <li Class="PatchOperationTest">
+      <xpath>Defs/ResearchTabDef[defName="CE_Turrets"]</xpath>
+    </li>
+
+	<li Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_FaceHugger"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_FaceHugger"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>Face grab</label>
+					<capacities>
+						<li>RRY_FaceHuggerGrab</li>
+					</capacities>
+					<power>1</power>
+					<cooldownTime>1.5</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.8</chanceFactor>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>11</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.0</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>1.5</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+					<chanceFactor>0.2</chanceFactor>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>11</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.0</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_FaceHugger"]/race/baseHealthScale</xpath>
+		<value>
+			<baseHealthScale>1.0</baseHealthScale>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Queen"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Quadruped</bodyShape>
+			</li>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Queen"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.5</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_LeftHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>15</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.178</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.5</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_RightHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>15</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.178</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>25</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>6</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.282</armorPenetration>
+				</li>
+				
+				<li Class="CombatExtended.ToolCE">
+				<label>inner teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>30</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>6</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.282</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.064</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>RRY_TailWhip</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_AttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.064</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail spike</label>
+					<capacities>
+					  <li>Stab</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>40</power>
+					<cooldownTime>2.5</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_SpikeAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.264</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Drone"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Quadruped</bodyShape>
+			</li>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Drone"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>11.5</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_LeftHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>14</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.124</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>11.5</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_RightHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>14</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.124</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>12.5</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<armorPenetration>0.148</armorPenetration>
+				</li>
+				
+				<li Class="CombatExtended.ToolCE">
+				<label>inner teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>18.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_InnerTeeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<armorPenetration>0.184</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.064</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>RRY_TailWhip</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_AttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.064</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail spike</label>
+					<capacities>
+					  <li>Stab</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>20</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_SpikeAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.214</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Warrior"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Quadruped</bodyShape>
+			</li>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Warrior"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>16.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_LeftHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>14</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.156</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>16.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_RightHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>14</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.156</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>12.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<armorPenetration>0.144</armorPenetration>
+				</li>
+				
+				<li Class="CombatExtended.ToolCE">
+				<label>inner teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>20.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_InnerTeeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<armorPenetration>0.204</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>9</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.064</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>RRY_TailWhip</li>
+					</capacities>
+					<power>9</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_AttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.064</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail spike</label>
+					<capacities>
+					  <li>Stab</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>25</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_SpikeAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.244</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Runner"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Quadruped</bodyShape>
+			</li>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Runner"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>10.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_LeftHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>14</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.156</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>10.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_RightHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>14</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.156</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>15.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<armorPenetration>0.164</armorPenetration>
+				</li>
+				
+				<li Class="CombatExtended.ToolCE">
+				<label>inner teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>20.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_InnerTeeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<armorPenetration>0.204</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.064</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>RRY_TailWhip</li>
+					</capacities>
+					<power>7</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_AttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.064</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail spike</label>
+					<capacities>
+					  <li>Stab</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>25</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_SpikeAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.244</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Predalien"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Predalien"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>17.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_LeftHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>14</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.214</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>17.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_RightHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>14</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.214</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>13.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<armorPenetration>0.184</armorPenetration>
+				</li>
+				
+				<li Class="CombatExtended.ToolCE">
+				<label>inner teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>22.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_InnerTeeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<armorPenetration>0.244</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.086</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>RRY_TailWhip</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_AttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.096</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail spike</label>
+					<capacities>
+					  <li>Stab</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>30</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_SpikeAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.284</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+
+	<li Class="PatchOperationAddModExtension">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Neomorph"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</li>
+
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Neomorph"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>8.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_LeftHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>14</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.114</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right claw</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>Cut</li>
+					</capacities>
+					<power>8.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_RightHand</linkedBodyPartsGroup>
+					<surpriseAttack>
+						<extraMeleeDamages>
+							<li>
+								<def>Stun</def>
+								<amount>14</amount>
+							</li>
+						</extraMeleeDamages>
+					</surpriseAttack>
+					<armorPenetration>0.114</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>teeth</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>8.2</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+					<chanceFactor>0.07</chanceFactor>
+					<armorPenetration>0.124</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>5</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.064</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>tail</label>
+					<capacities>
+					  <li>Blunt</li>
+					  <li>RRY_TailWhip</li>
+					</capacities>
+					<power>5</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>RRY_Xeno_Tail_AttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.096</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+  </operations>
+</Operation>
+
+</Patch>
+
