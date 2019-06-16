@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>*/ThingDef[defName="RRY_Bullet_DroneAcidSpit"]/projectile</xpath>
+				<value>
+					<projectile Class="CombatExtended.ProjectilePropertiesCE">
+					  <damageDef>RRY_AcidDamage</damageDef>
+					  <damageAmountBase>15</damageAmountBase>
+					  <speed>45</speed>
+					  <armorPenetrationBase>0.46</armorPenetrationBase>
+					</projectile>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>RRY_Gun_DroneAcidSpit</defName>
+    <statBases>
+      <Mass>22</Mass>
+      <RangedWeapon_Cooldown>3.4</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.16</ShotSpread>
+      <SwayFactor>1.50</SwayFactor>
+      <Bulk>0</Bulk>
+    </statBases>
+    <Properties>
+		<recoilAmount>0.0</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>RRY_Bullet_DroneAcidSpit</defaultProjectile>
+      <warmupTime>1.25</warmupTime>
+      <range>12</range>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>4</burstShotCount>
+      <muzzleFlashScale>0</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <FireModes>
+      <aiUseBurstMode>TRUE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+		<li>DroneAcidSpit</li>
+    </weaponTags>
+  </Operation>
+</Patch>

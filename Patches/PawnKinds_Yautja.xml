@@ -4,11 +4,7 @@
 <Operation Class="PatchOperationSequence">
   <success>Always</success>
   <operations>
-  
-    <li Class="PatchOperationTest">
-      <xpath>Defs/ResearchTabDef[defName="CE_Turrets"]</xpath>
-    </li>
-	
+
     <li Class="PatchOperationAddModExtension">
     <xpath>/Defs/PawnKindDef[defName="RRY_YautjaBase" or defName="BaseYautjaPawnKind" or defName="StrangerInBlackYautja_RRY"]</xpath>
 		<value>

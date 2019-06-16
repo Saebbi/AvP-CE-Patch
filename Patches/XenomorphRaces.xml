@@ -63,14 +63,7 @@
 			</tools>
 		</value>
 	</li>
-
-	<li Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_FaceHugger"]/race/baseHealthScale</xpath>
-		<value>
-			<baseHealthScale>1.0</baseHealthScale>
-		</value>
-	</li>
-
+	
 	<li Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[defName="RRY_Xenomorph_Queen"]</xpath>
 		<value>
