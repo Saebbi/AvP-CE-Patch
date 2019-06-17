@@ -39,7 +39,7 @@
     <defName>Ammo_SpearRifle</defName>
     <label>Spear bolts</label>
     <graphicData>
-      <texPath>Things/Ammo/Charged/Regular</texPath>
+      <texPath>Things/Ammo/Advanced/Speargun</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <statBases>
