@@ -39,7 +39,7 @@
     <defName>Ammo_YCB</defName>
     <label>Yautja heavy arrow</label>
     <graphicData>
-      <texPath>Things/Ammo/Neolithic/Arrow/Steel</texPath>
+      <texPath>Things/Ammo/Advanced/Arrow/Yautja</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <statBases>
