@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[defName="RRY_MeleeWeapon_XenoSpear"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>shaft</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>9</power>
+					<cooldownTime>2.6</cooldownTime>
+					<armorPenetration>0.12</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+						<li>Slash</li>
+					</capacities>
+					<power>24</power>
+					<cooldownTime>2.8</cooldownTime>
+					<armorPenetration>0.25</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_MeleeWeapon_XenoSpear"]/statBases</xpath>
+		<value>
+    		<Bulk>6.5</Bulk>
+    		<MeleeCounterParryBonus>1.35</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_MeleeWeapon_XenoSpear"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.36</MeleeParryChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+  
+</Patch>

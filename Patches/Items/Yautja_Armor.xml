@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_HunterLightArmourChestplate"]/statBases</xpath>
+		<value>
+			<Bulk>13</Bulk>
+			<WornBulk>11</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_HunterArmourChestplate"]/statBases</xpath>
+		<value>
+      		<Bulk>13.5</Bulk>
+			<WornBulk>12</WornBulk>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_HunterHeavyArmourChestplate"]/statBases</xpath>
+		<value>
+			<Bulk>14.5</Bulk>
+			<WornBulk>16</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_HunterArmourGreaves"]/statBases</xpath>
+		<value>
+      		<Bulk>7</Bulk>
+			<WornBulk>6.5</WornBulk>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_HunterBioMask"]/statBases</xpath>
+		<value>
+      		<Bulk>1.5</Bulk>
+			<WornBulk>1.5</WornBulk>
+		</value>
+	</Operation>	
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_HunterEliteArmourChestplate"]/statBases</xpath>
+		<value>
+			<Bulk>13</Bulk>
+			<WornBulk>11</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_HunterEliteBioMask"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+			<WornBulk>1</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_HunterLeaderArmourChestplate"]/statBases</xpath>
+		<value>
+			<Bulk>13</Bulk>
+			<WornBulk>11</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_HunterLeaderBioMask"]/statBases</xpath>
+		<value>
+      		<Bulk>1</Bulk>
+			<WornBulk>1</WornBulk>
+		</value>
+	</Operation>
+
+</Patch>

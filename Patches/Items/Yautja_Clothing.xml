@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_HunterVest"]/statBases</xpath>
+		<value>
+			<Bulk>12</Bulk>
+			<WornBulk>2.5</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Apparel_Mesh"]/statBases</xpath>
+		<value>
+      		<Bulk>13.5</Bulk>
+			<WornBulk>3</WornBulk>
+		</value>
+	</Operation>
+
+</Patch>

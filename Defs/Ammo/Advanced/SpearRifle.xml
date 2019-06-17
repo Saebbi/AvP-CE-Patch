@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoSpearRifle</defName>
+      <label>Spear rifle ammo</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_SpearRifle</defName>
+    <label>Spear bolts</label>
+    <ammoTypes>
+      <Ammo_SpearRifle>Bullet_SpearRifle</Ammo_SpearRifle>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Class="CombatExtended.AmmoDef" Name="SpearRifleBase" ParentName="AmmoBase" Abstract="True">
+    <description>Spear bolts</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoSpearRifle</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="SpearRifleBase">
+    <defName>Ammo_SpearRifle</defName>
+    <label>Spear bolts</label>
+    <graphicData>
+      <texPath>Things/Ammo/Charged/Regular</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.95</MarketValue>
+    </statBases>
+    <ammoClass>Charged</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Class="CombatExtended.AmmoDef" Name="BaseSpearRifle" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Projectile/NeedlerShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <damageDef>Bullet</damageDef>
+	  <flyOverhead>false</flyOverhead>
+      <speed>120</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseSpearRifle">
+    <defName>Bullet_SpearRifle</defName>
+    <label>Spear bolt</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>35</damageAmountBase>
+      <stoppingPower>2.0</stoppingPower>
+      <armorPenetrationBase>0.72</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+	
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_SpearRifle</defName>
+    <label>make Spear rifle cartridge x20</label>
+    <description>Craft 20 Spear rifle cartridges.</description>
+    <jobString>Making Spear rifle cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_SpearRifle>20</Ammo_SpearRifle>
+    </products>
+	<researchPrerequisite>RRY_YautjaRanged_Adv</researchPrerequisite>
+  </RecipeDef>
+	
+</Defs>

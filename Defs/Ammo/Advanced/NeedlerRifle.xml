@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoNeedlerRifle</defName>
+      <label>Needler ammo</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_NeedlerRifle</defName>
+    <label>Needler ammo</label>
+    <ammoTypes>
+      <Ammo_NeedlerRifle>Bullet_NeedlerRifle</Ammo_NeedlerRifle>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Class="CombatExtended.AmmoDef" Name="NeedlerRifleBase" ParentName="AmmoBase" Abstract="True">
+    <description>Needler ammo</description>
+    <statBases>
+	  <Mass>0.01</Mass>
+	  <Bulk>0.02</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoNeedlerRifle</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="NeedlerRifleBase">
+    <defName>Ammo_NeedlerRifle</defName>
+    <label>Needler cartridge</label>
+    <graphicData>
+      <texPath>Things/Ammo/Charged/Regular</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.95</MarketValue>
+    </statBases>
+    <ammoClass>Charged</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Class="CombatExtended.AmmoDef" Name="BaseNeedlerRifle" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Projectile/NeedlerShotSml</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <damageDef>Bullet</damageDef>
+	  <flyOverhead>false</flyOverhead>
+      <speed>75</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseNeedlerRifle">
+    <defName>Bullet_NeedlerRifle</defName>
+    <label>Needler shot</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>5</damageAmountBase>
+      <armorPenetrationBase>0.68</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+	
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_NeedlerRifle</defName>
+    <label>make Needler cartridge x20</label>
+    <description>Craft 20 Needler cartridges.</description>
+    <jobString>Making Needler cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_NeedlerRifle>20</Ammo_NeedlerRifle>
+    </products>
+	<researchPrerequisite>RRY_YautjaRanged_Med</researchPrerequisite>
+  </RecipeDef>
+	
+</Defs>

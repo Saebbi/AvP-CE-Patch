@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>RRY_Gun_Hunting_Bow</defName>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>2</SwayFactor>
+      <Bulk>5.50</Bulk>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_YHB</defaultProjectile>
+      <warmupTime>2.0</warmupTime>
+      <soundCast>Bow_Large</soundCast>
+      <range>29.9</range>
+    </Properties>
+    <AmmoUser>
+      <ammoSet>AmmoSet_YHB</ammoSet>
+    </AmmoUser>
+    <weaponTags>
+		<li>YautjaBow</li>
+		<li>YautjaHuntingBow</li>
+		<li>YautjaRanged</li>
+    </weaponTags>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+	<xpath>*/ThingDef[defName="RRY_Gun_Hunting_Bow"]/tools</xpath>
+	<value>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>limb</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<armorPenetration>0.1</armorPenetration>
+			</li>
+		</tools>
+	</value>	
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>RRY_Gun_Compound_Bow</defName>
+    <statBases>
+      <Mass>3</Mass>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>1.2</SwayFactor>
+      <Bulk>8.50</Bulk>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_YCB</defaultProjectile>
+      <warmupTime>2.0</warmupTime>
+      <soundCast>Bow_Large</soundCast>
+      <range>34.9</range>
+    </Properties>
+    <AmmoUser>
+      <ammoSet>AmmoSet_YCB</ammoSet>
+    </AmmoUser>
+    <weaponTags>
+		<li>YautjaBow</li>
+		<li>YautjaCompoundBow</li>
+		<li>YautjaRanged</li>
+    </weaponTags>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+	<xpath>*/ThingDef[defName="RRY_Gun_Compound_Bow"]/tools</xpath>
+	<value>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>limb</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<armorPenetration>0.1</armorPenetration>
+			</li>
+		</tools>
+	</value>	
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>RRY_Gun_YautjaBlaster</defName>
+    <statBases>
+      <Mass>5</Mass>
+      <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>1.0</SwayFactor>
+      <Bulk>2.50</Bulk>
+    </statBases>
+    <Properties>
+		<recoilAmount>0.30</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_YPC</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>23</range>
+      <soundCast>RRY_Shot_ShoulderCannon</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <FireModes>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+		<li>Yautja</li>
+		<li>YautjaGun</li>
+		<li>YautjaBlaster</li>
+		<li>YautjaRanged</li>
+    </weaponTags>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>RRY_Gun_NeedlerRifle</defName>
+    <statBases>
+      <Mass>3</Mass>
+      <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.14</ShotSpread>
+      <SwayFactor>1.50</SwayFactor>
+      <Bulk>3.50</Bulk>
+    </statBases>
+    <Properties>
+		<recoilAmount>0.20</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_NeedlerRifle</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <range>30</range>
+	  <burstShotCount>3</burstShotCount>
+	  <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+      <muzzleFlashScale>0</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>30</magazineSize>
+      <reloadTime>4.75</reloadTime>
+      <ammoSet>AmmoSet_NeedlerRifle</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>TRUE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+		<li>Yautja</li>
+		<li>YautjaGun</li>
+		<li>YautjaNeedler</li>
+		<li>YautjaRanged</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+	<xpath>*/ThingDef[defName="RRY_Gun_NeedlerRifle"]/tools</xpath>
+	<value>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.6</cooldownTime>
+				<armorPenetration>0.1</armorPenetration>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>1.6</cooldownTime>
+				<armorPenetration>0.1</armorPenetration>
+			</li>
+		</tools>
+	</value>	
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>RRY_Gun_SpearRifle</defName>
+    <statBases>
+      <Mass>4</Mass>
+      <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.14</ShotSpread>
+      <SwayFactor>1.50</SwayFactor>
+      <Bulk>3.50</Bulk>
+    </statBases>
+    <Properties>
+		<recoilAmount>0.20</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_SpearRifle</defaultProjectile>
+      <warmupTime>3.5</warmupTime>
+      <range>55</range>
+      <soundCast>Shot_SniperRifle</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>0</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>1</magazineSize>
+      <reloadTime>4.75</reloadTime>
+      <ammoSet>AmmoSet_SpearRifle</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>TRUE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>SpearRifle</li>
+	  <li>YautjaGun</li>
+	  <li>YautjaRanged</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+	<xpath>*/ThingDef[defName="RRY_Gun_SpearRifle"]/tools</xpath>
+	<value>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>grip</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<armorPenetration>0.1</armorPenetration>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>barrel</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<armorPenetration>0.1</armorPenetration>
+			</li>
+		</tools>
+	</value>	
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>RRY_Gun_SmartDisk</defName>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>0.5</SwayFactor>
+      <Bulk>2.50</Bulk>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_SmartDisk</defaultProjectile>
+      <warmupTime>4</warmupTime>
+      <range>20</range>
+      <soundCast>Interact_BeatFire</soundCast>
+      <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <FireModes>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+		<li>Yautja</li>
+		<li>YautjaGun</li>
+		<li>YautjaSmartDisk</li>
+		<li>YautjaRanged</li>
+    </weaponTags>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+	<xpath>*/ThingDef[defName="RRY_Gun_SmartDisk"]/tools</xpath>
+	<value>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>blade</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<armorPenetration>0.1</armorPenetration>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<armorPenetration>0.1</armorPenetration>
+			</li>
+		</tools>
+	</value>	
+  </Operation>
+  
+</Patch>

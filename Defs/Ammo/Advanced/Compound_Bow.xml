@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoYCB</defName>
+      <label>Yautja heavy arrow</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_YCB</defName>
+    <label>Yautja heavy arrow</label>
+    <ammoTypes>
+      <Ammo_YCB>Bullet_YCB</Ammo_YCB>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Class="CombatExtended.AmmoDef" Name="YCBBase" ParentName="AmmoBase" Abstract="True">
+    <description>Yautja heavy arrow</description>
+    <statBases>
+	  <Mass>0.26</Mass>
+	  <Bulk>0.26</Bulk>
+    </statBases>
+    <tradeTags>
+      <li>CE_AutoEnableTrade</li>
+      <li>CE_AutoEnableCrafting</li>
+    </tradeTags>
+    <thingCategories>
+      <li>AmmoYCB</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="YCBBase">
+    <defName>Ammo_YCB</defName>
+    <label>Yautja heavy arrow</label>
+    <graphicData>
+      <texPath>Things/Ammo/Neolithic/Arrow/Steel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.75</MarketValue>
+    </statBases>
+    <ammoClass>SteelArrow</ammoClass>
+  </ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+
+  <ThingDef Class="CombatExtended.AmmoDef" Name="BaseYCB" ParentName="BaseBullet" Abstract="true">
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseYCB">
+    <defName>Bullet_YCB</defName>
+    <label>yautja heavy arrow</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>30</damageAmountBase>
+      <stoppingPower>2.5</stoppingPower>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+	
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_YCB</defName>
+    <label>make Yautja heavy arrows x10</label>
+    <description>Craft 10 Yautja heavy arrows.</description>
+    <jobString>Making Yautja heavy arrows.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_YCB>10</Ammo_YCB>
+    </products>
+  </RecipeDef>
+	
+</Defs>

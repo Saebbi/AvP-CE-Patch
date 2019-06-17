@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Equipment_HunterGauntlet"]/statBases</xpath>
+		<value>
+			<Bulk>1</Bulk>
+      		<MeleeCounterParryBonus>1.25</MeleeCounterParryBonus>
+			<WornBulk>1.5</WornBulk>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[defName="RRY_Equipment_HunterShoulderCannon"]/statBases</xpath>
+		<value>
+      		<Bulk>2</Bulk>
+			<WornBulk>2.5</WornBulk>
+		</value>
+	</Operation>
+	
+</Patch>
