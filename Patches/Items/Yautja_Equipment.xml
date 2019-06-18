@@ -4,17 +4,17 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>*/ThingDef[defName="RRY_Equipment_HunterGauntlet"]/statBases</xpath>
 		<value>
-			<Bulk>1</Bulk>
+			<Bulk>2</Bulk>
       		<MeleeCounterParryBonus>1.25</MeleeCounterParryBonus>
-			<WornBulk>1.5</WornBulk>
+			<WornBulk>2.5</WornBulk>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
 		<xpath>*/ThingDef[defName="RRY_Equipment_HunterShoulderCannon"]/statBases</xpath>
 		<value>
-      		<Bulk>2</Bulk>
-			<WornBulk>2.5</WornBulk>
+      		<Bulk>3</Bulk>
+			<WornBulk>3.5</WornBulk>
 		</value>
 	</Operation>
 	
