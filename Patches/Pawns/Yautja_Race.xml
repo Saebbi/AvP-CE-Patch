@@ -106,6 +106,13 @@
 			<li Class="CombatExtended.CompProperties_Suppressable" />
 		</value>
 	</li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="RRY_Alien_Yautja"]/race/baseHealthScale</xpath>
+		<value>
+			<baseHealthScale>1.5</baseHealthScale>
+		</value>
+	</li>
   </operations>
 </Operation>
 

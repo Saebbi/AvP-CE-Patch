@@ -5,7 +5,7 @@
 		<xpath>*/ThingDef[defName="RRY_Apparel_HunterLightArmourChestplate"]/statBases</xpath>
 		<value>
 			<Bulk>13</Bulk>
-			<WornBulk>11</WornBulk>
+			<WornBulk>8.5</WornBulk>
 		</value>
 	</Operation>
 
@@ -13,7 +13,7 @@
 		<xpath>*/ThingDef[defName="RRY_Apparel_HunterArmourChestplate"]/statBases</xpath>
 		<value>
       		<Bulk>13.5</Bulk>
-			<WornBulk>12</WornBulk>
+			<WornBulk>10.5</WornBulk>
 		</value>
 	</Operation>
 	
@@ -21,7 +21,7 @@
 		<xpath>*/ThingDef[defName="RRY_Apparel_HunterHeavyArmourChestplate"]/statBases</xpath>
 		<value>
 			<Bulk>14.5</Bulk>
-			<WornBulk>16</WornBulk>
+			<WornBulk>11.5</WornBulk>
 		</value>
 	</Operation>
 
@@ -45,7 +45,7 @@
 		<xpath>*/ThingDef[defName="RRY_Apparel_HunterEliteArmourChestplate"]/statBases</xpath>
 		<value>
 			<Bulk>13</Bulk>
-			<WornBulk>11</WornBulk>
+			<WornBulk>9.5</WornBulk>
 		</value>
 	</Operation>
 
@@ -61,7 +61,7 @@
 		<xpath>*/ThingDef[defName="RRY_Apparel_HunterLeaderArmourChestplate"]/statBases</xpath>
 		<value>
 			<Bulk>13</Bulk>
-			<WornBulk>11</WornBulk>
+			<WornBulk>9.5</WornBulk>
 		</value>
 	</Operation>
 
