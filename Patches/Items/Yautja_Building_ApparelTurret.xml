@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>RRY_Gun_ShoulderCannon</defName>
+    <statBases>
+      <Mass>5</Mass>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>0.8</SwayFactor>
+      <Bulk>2.50</Bulk>
+    </statBases>
+    <Properties>
+		<recoilAmount>0.25</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_PSC</defaultProjectile>
+      <warmupTime>0.5</warmupTime>
+      <range>24.9</range>
+      <soundCast>RRY_Shot_ShoulderCannon</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+      <consumeFuelPerShot>1</consumeFuelPerShot>
+      <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+      <burstShotCount>1</burstShotCount>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+    </Properties>
+    <FireModes>
+    	<aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+		<li>TurretGun</li>
+    </weaponTags>
+  </Operation>
+  
+</Patch>
