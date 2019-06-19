@@ -113,6 +113,14 @@
 			<baseHealthScale>1.5</baseHealthScale>
 		</value>
 	</li>
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="RRY_Alien_Yautja"]/statBases</xpath>
+		<value>
+			<CarryWeight>120</CarryWeight>
+			<CarryBulk>50</CarryBulk>
+		</value>
+	</li>
   </operations>
   
 </Operation>
